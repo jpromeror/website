@@ -62,9 +62,7 @@ const about = {
 const repos = {
   show: true,
   heading: "Projects",
-  gitHubUsername: "jpromeror", //i.e."johnDoe12Gh"
-  reposLength: 1,
-  specificRepos: ["EventPointer"],
+  specificRepos: ["10XGenomics/HumanColonCancer_VisiumHD","jpromeror/EventPointer"],
 };
 
 
@@ -127,7 +125,7 @@ const getInTouch = {
 
 
 const experiences = {
-  show: true,
+  show: false,
   heading: "Experiences",
   data: [
     {
