@@ -21,7 +21,7 @@ const API = "https://api.github.com";
 
 const Project = ({ heading, username, length, specfic }) => {
   const allReposAPI = `${API}/users/${username}/repos?sort=updated&direction=desc`;
-  const specficReposAPI = `${API}/repos/${username}`; // https://api.github.com/repos/10XGenomics/HumanColonCancer_VisiumHD
+  const specficReposAPI = `${API}/repos/`; // https://api.github.com/repos/10XGenomics/HumanColonCancer_VisiumHD
   const dummyProjectsArr = new Array(length + specfic.length).fill(
     dummyProject
   );
