@@ -63,7 +63,7 @@ const repos = {
   show: true,
   heading: "Projects",
   gitHubUsername: "jpromeror", //i.e."johnDoe12Gh"
-  reposLength: 1,
+  reposLength: 0,
   specificRepos: ["jpromeror/EventPointer","10XGenomics/HumanColonCancer_VisiumHD"],
 };
 
