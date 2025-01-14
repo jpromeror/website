@@ -122,7 +122,7 @@ const getInTouch = {
   show: true,
   heading: "Get In Touch",
   message:
-    "Interested in discussing Computational Biology, Genomics, Transcriptomics, or just want to say hi? Feel free to reach out to me on any of my social media accounts.",
+    "Interested in discussing Computational Biology, Genomics, Transcriptomics, or just want to say hi?\nFeel free to reach out to me on any of my social media accounts.",
 };
 
 

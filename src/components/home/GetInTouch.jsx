@@ -1,6 +1,6 @@
 import React from "react";
 
-const GetInTouch = ({ heading, message, email }) => {
+const GetInTouch = ({ heading, message}) => {
   return (
     <>
       <h2 className="display-4 pb-3 text-center">{heading}</h2>
