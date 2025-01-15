@@ -9,7 +9,7 @@ const mainBody = {
   firstName: "Juan P.",
   middleName: "",
   lastName: "Romero",
-  message: " Decoding the complexities of biology through computational power and algorithms ",
+  message: " Unlocking the complexity of biology by harnessing computer science and cutting-edge algorithms ",
   icons: [
     {
       image: "fa-github",
@@ -18,10 +18,6 @@ const mainBody = {
     {
       image: "fa-linkedin",
       url: "https://www.linkedin.com/in/jpromeror/",
-    },
-    {
-      image: "fa-instagram",
-      url: "https://www.instagram.com/jp.romeror/",
     },
     {
       image: "fa-twitter",
@@ -50,7 +46,7 @@ const about = {
   imageLink: require("../editable-stuff/jpromero.jpg"),
   imageSize: 375,
   message:
-    "Hello! Im Juan Pablo Romero. I receieved my PhD in Applied Engineering / Bioinformatics in 2017 from the University of Navarra. Currently Im a Senior Computational Biologist at 10x Genomics. I've spent a few years trying to understand biology from the side of algorithms and computer science. Im happily married and passionate about all things related to video games and food",
+    "Hello! I'm Joe. I received my PhD in Applied Engineering and Bioinformatics from the University of Navarra in 2017. Currently, I'm a Senior Computational Biologist at 10x Genomics. I have dedicated several years to understanding biology through the lens of algorithms and computer science. I'm happily married and passionate about video games and food",
   resume: "https://drive.google.com/file/d/1Hse6ncbdJoFK9dgqcH3b_1eiv7N8HxdY/view?usp=sharing",
 };
 
@@ -120,9 +116,9 @@ const skills = {
 // GET IN TOUCH SECTION
 const getInTouch = {
   show: true,
-  heading: "Get In Touch",
+  heading: "Contact Me!",
   message:
-    "Interested in discussing Computational Biology, Genomics, Transcriptomics, or just want to say hi?\nFeel free to reach out to me on any of my social media accounts.",
+    "Feel free to reach out to me on any of my social media accounts.",
 };
 
 
