@@ -16,8 +16,7 @@ const Footer = (props) => {
         > <span className="badge bg-dark">
             七転び八起き
           </span>
-        </a>{" "}
-        using <i className="fab fa-react" />
+        </a>
         <p>
           <small className="text-muted">
           Nana Korobi Ya Oki
