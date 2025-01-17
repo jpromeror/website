@@ -55,7 +55,7 @@ const Publication = ({ SID, PID, BID }) => {
       console.error(error.message);
       throw new Error("Failed to fetch publications. Please try again later.");
     }
-  }, [PID, BID]);
+  }, []);
 
   useEffect(() => {
     fetchPublications(PubmedAPI, BioXAPI, PID, BID);
