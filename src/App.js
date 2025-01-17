@@ -4,6 +4,7 @@ import {
   navBar,
   mainBody,
   about,
+  publications,
   repos,
   leadership,
   skills,
@@ -16,6 +17,7 @@ import Project from "./components/home/Project";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Skills from "./components/home/Skills";
+import Publication from "./components/home/Publication.jsx";
 // import { Blog } from "./components/blog/Blog";
 // import BlogPost from "./components/blog/BlogPost";
 import GetInTouch from "./components/home/GetInTouch.jsx";
@@ -47,6 +49,14 @@ const Home = React.forwardRef((props, ref) => {
           <Experience experiences={experiences}/>
         )
       }
+      {publications.show && (
+        <Publication
+          heading={publications.heading}
+          PID={publications.PublicationIDs}
+          BID={publications.preprintIDS}
+          SID={publications.ScholarID}
+        />
+      )}
       {repos.show && (
         <Project
           heading={repos.heading}
