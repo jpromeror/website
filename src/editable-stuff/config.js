@@ -26,8 +26,7 @@ const mainBody = {
     {
       image: "fa-graduation-cap",
       url: "https://scholar.google.com/citations?user=DSGeebYAAAAJ&hl=en"
-    }
-    
+    },
   ],
 };
 
