@@ -14,7 +14,7 @@ const dummyPublication = {
 
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 
-const Publication = ({ SID, PID, BID }) => {
+const Publication = ({heading, PID, BID, SID }) => {
   const PubmedAPI = "https://api.ncbi.nlm.nih.gov/lit/ctxp/v1/pubmed/?format=citation&contenttype=json&id=";
   const BioXAPI = "https://api.biorxiv.org/details/biorxiv/";
   const dummyPublicationsArr = new Array(PID.length + BID.length).fill(dummyPublication);
@@ -65,7 +65,7 @@ const Publication = ({ SID, PID, BID }) => {
     <Jumbotron fluid id="publications" className="bg-light m-0">
       <Container className="">
         <h2 className="display-4 pb-5 text-center">
-          Selected Publications{" "}
+          {heading}
           <a href={SID} target="_blank" rel="noopener noreferrer">
         <i className="fa-brands fa-google-scholar"></i>
       </a>
