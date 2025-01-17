@@ -23,6 +23,11 @@ const mainBody = {
       image: "fa-twitter",
       url: "https://www.x.com/jprr91/",
     },
+    {
+      image: "fa-graduation-cap",
+      url: "https://scholar.google.com/citations?user=DSGeebYAAAAJ&hl=en"
+    }
+    
   ],
 };
 
