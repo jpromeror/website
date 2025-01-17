@@ -56,7 +56,7 @@ const Publication = ({heading, PID, BID, SID }) => {
         const publication = {
           title: response.data.collection[0].title,
           authors: response.data.collection[0].authors,
-          journal: "biorXiv",
+          journal: "biorXiv (preprint)",
           doi: response.data.collection[0].doi,
         };
         //console.log(reorderedFields);
