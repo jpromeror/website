@@ -6,9 +6,9 @@ import PublicationCard from "./PublicationCard";
 import axios from "axios";
 
 const dummyPublication = {
-  title: null,
-  authors: null,
-  journal: null,
+  title: "Title not available",
+  authors: "Authors not available",
+  journal: "Journal not available",
   doi: null,
 };
 
@@ -31,8 +31,14 @@ const Publication = ({heading, PID, BID, SID }) => {
           .split('. ')
           .map(sentence => sentence.trim())
           .filter(sentence => sentence.length > 0 && !sentence.startsWith("Published"));
-        const reorderedFields = [fields[1], fields[0], fields[2], fields[4]];
-        pubList.push(reorderedFields);
+          const publication = {
+            title: fields[1],
+            authors: fields[0],
+            journal: fields[2],
+            doi: fields[4],
+          };
+        //const reorderedFields = [fields[1], fields[0], fields[2], fields[4]];
+        pubList.push(publication);
 
         // Introduce a delay after every two requests
         if ((i + 1) % 2 === 0 && i + 1 < PID.length) {
@@ -41,14 +47,20 @@ const Publication = ({heading, PID, BID, SID }) => {
       }
       for (let bioID of BID) {
         const response = await axios.get(`${BioXAPI}${bioID}`);
-        const reorderedFields = [
-          response.data.collection[0].title,
-          response.data.collection[0].authors,
-          "biorXiv",
-          response.data.collection[0].doi,
-        ];
-        console.log(reorderedFields);
-        pubList.push(reorderedFields);
+        //const reorderedFields = [
+          //response.data.collection[0].title,
+          //response.data.collection[0].authors,
+          //"biorXiv",
+          //response.data.collection[0].doi,
+        //];
+        const publication = {
+          title: response.data.collection[0].title,
+          authors: response.data.collection[0].authors,
+          journal: "biorXiv",
+          doi: response.data.collection[0].doi,
+        };
+        //console.log(reorderedFields);
+        pubList.push(publication);
       }
       setPublicationsArray(pubList);
     } catch (error) {
@@ -64,12 +76,12 @@ const Publication = ({heading, PID, BID, SID }) => {
   return (
     <Jumbotron fluid id="publications" className="bg-light m-0">
       <Container className="">
-        <h2 className="display-4 pb-5 text-center">
-          {heading}
-          <a href={SID} target="_blank" rel="noopener noreferrer">
-        <i className="fa-brands fa-google-scholar"></i>
-      </a>
-        </h2>
+      <h2 className="display-4 pb-5 text-center">
+        {heading}
+        <a href={SID} target="_blank" rel="noopener noreferrer">
+          <i className="fa-brands fa-google-scholar"></i>
+        </a>
+      </h2>
         <Row>
           {publicationsArray.length
             ? publicationsArray.map((publication, index) => (
