@@ -53,8 +53,8 @@ const about = {
 const publications = {
 show: true,
 heading: "Selected Publications",
-PublicationIDs: ["32972203", "30253752","36629404","39595158"],
-preprintIDS: ["10.1101/2024.06.04.597233"],
+PublicationIDs: ["32972203", "30253752","36629404","39595158"], // Pubmed IDS
+preprintIDS: ["10.1101/2024.06.04.597233"], // biorXiv
 ScholarID: "DSGeebYAAAAJ",
 }
 
@@ -68,7 +68,7 @@ const repos = {
   heading: "Projects",
   gitHubUsername: "jpromeror", //i.e."johnDoe12Gh"
   reposLength: 0,
-  specificRepos: ["jpromeror/EventPointer","10XGenomics/HumanColonCancer_VisiumHD"],
+  specificRepos: ["jpromeror/EventPointer","10XGenomics/HumanColonCancer_VisiumHD","jpromeror/SC_KidneyOrganoid_ACE2"],
 };
 
 

@@ -4,6 +4,8 @@ import { Jumbotron } from "./migration";
 import Row from "react-bootstrap/Row";
 import PublicationCard from "./PublicationCard";
 import axios from "axios";
+import graduateHatIcon from './graduate_hat.ico'; // Adjust the path as needed
+
 
 const dummyPublication = {
   title: "Title not available",
@@ -73,15 +75,17 @@ const Publication = ({heading, PID, BID, SID }) => {
     fetchPublications(PubmedAPI, BioXAPI, PID, BID);
   }, [fetchPublications, PID, BID]);
 
+  const googleScholarLink = `https://scholar.google.com/citations?user=${SID}&hl=en`;
+
   return (
     <Jumbotron fluid id="publications" className="bg-light m-0">
       <Container className="">
       <h2 className="display-4 pb-5 text-center">
-        {heading}
-        <a href={SID} target="_blank" rel="noopener noreferrer">
-          <i className="fa-brands fa-google-scholar"></i>
-        </a>
-      </h2>
+          {heading}
+          <a href={googleScholarLink} target="_blank" rel="noopener noreferrer">
+            <img src={graduateHatIcon} alt="Google Scholar" className="icon-google-scholar" />
+          </a>
+        </h2>
         <Row>
           {publicationsArray.length
             ? publicationsArray.map((publication, index) => (
