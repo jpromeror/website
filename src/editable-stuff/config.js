@@ -50,6 +50,14 @@ const about = {
   resume: "https://drive.google.com/file/d/1Hse6ncbdJoFK9dgqcH3b_1eiv7N8HxdY/view?usp=sharing",
 };
 
+const publications = {
+show: true,
+heading: "Selected Publications",
+PublicationIDs: ["32972203", "30253752","36629404","39595158"],
+preprintIDS: ["10.1101/2024.06.04.597233"],
+ScholarID: "DSGeebYAAAAJ",
+}
+
 // PROJECTS SECTION
 // Setting up project lenght will automatically fetch your that number of recently updated projects, or you can set this field 0 to show none.
 //      i.e: reposLength: 0,
@@ -144,4 +152,4 @@ const experiences = {
 //   show: false,
 // };
 
-export { navBar, mainBody, about, repos, skills, leadership, getInTouch, experiences };
+export { navBar, mainBody, about, publications, repos, skills, leadership, getInTouch, experiences };
